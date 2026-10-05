@@ -1,11 +1,9 @@
- Multiclass Classification of Fetal Health using Cardiotocogram (CTG) Data
+Multiclass Classification of Fetal Health using Cardiotocogram (CTG) Data
 
-UE24CS352A Machine Learning, Mini-Project
+Machine Learning, Mini-Project
 
-**Team:** [Name 1, SRN] and [Name 2, SRN]  
-**Section:** [__]  **Problem No.:** [__]
-
-This project is a reproduction of *"Multiclass Classification of Fetal Health using Cardiotocogram Data"* by J.R. Ereyi and M. Huo (Stanford, 2021), done with the permission of the course faculty. All credit for the original study and method goes to those authors.
+**Team:** [TANISHA DALMIA, PES2UG24CS550] and [SUSHANTH B, PES2UG24CS543]  
+**Section:** [I]  **Problem No.:** [44]
 
 ## Problem
 
