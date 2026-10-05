@@ -101,7 +101,7 @@ Numbers reported by the original paper (single 70/30 split). Fill in the last co
 | Logistic Regression | 0.8959 | [fill] |
 | Linear SVC          | 0.8927 | [fill] |
 
-Your numbers may differ slightly from the paper because of the random seed, library versions, and because feature selection here is fit on the training data only.
+Oour numbers may differ slightly from the paper because of the random seed, library versions, and because feature selection here is fit on the training data only.
 
 ## Reproducibility notes
 
@@ -110,8 +110,8 @@ Your numbers may differ slightly from the paper because of the random seed, libr
 
 ## Contributions
 
-- [Name 1]: [what you did]
-- [Name 2]: [what you did]
+- Sushanth: Worked on the report and code and tested it
+- Tanisha: Worked on the report and ppt
 
 ## References
 
