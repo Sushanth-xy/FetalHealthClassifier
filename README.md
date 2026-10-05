@@ -118,8 +118,6 @@ Your numbers may differ slightly from the paper because of the random seed, libr
 
 ## References
 
-- Ereyi, J.R. and Huo, M. (2021). Multiclass Classification of Fetal Health using Cardiotocogram Data. Stanford University.
 - Ayres de Campos et al. (2000). SisPorto 2.0: A Program for Automated Analysis of Cardiotocograms. J Matern Fetal Med 5:311-318.
-- Chen, T. and Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System. KDD '16.
 - Ke, G. et al. (2017). LightGBM: A highly efficient gradient boosting decision tree. NeurIPS 30.
 - Pedregosa et al. (2011). Scikit-learn: Machine Learning in Python. JMLR 12.
