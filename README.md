@@ -12,10 +12,7 @@ Classify a fetus as **Normal**, **Suspect** or **Pathological** from 21 numeric 
 ## Dataset
 
 Cardiotocography dataset (Ayres de Campos et al., 2000), UCI Machine Learning Repository: https://archive.ics.uci.edu/dataset/193/cardiotocography
-
 - 2,126 raw records, 21 features, 3 classes
-- After dropping nulls and duplicates: 2,113 samples (1,646 Normal / 292 Suspect / 175 Pathological)
-- Place the CSV at `data/fetal_health.csv` (the label column is `fetal_health`, with values 1, 2, 3)
 
 ## Repository structure
 
