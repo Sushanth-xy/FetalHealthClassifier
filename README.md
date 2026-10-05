@@ -1,4 +1,4 @@
-Multiclass Classification of Fetal Health using Cardiotocogram (CTG) Data
+## Multiclass Classification of Fetal Health using Cardiotocogram (CTG) Data
 
 Machine Learning, Mini-Project
 
