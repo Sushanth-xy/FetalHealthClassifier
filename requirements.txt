@@ -1,0 +1,17 @@
+# Core
+numpy>=1.26
+pandas>=2.0
+scikit-learn>=1.4        # cross_validate(params=...) needs >= 1.4
+xgboost>=2.0
+lightgbm>=4.0
+joblib>=1.3
+
+# Dataset download (KaggleDatasetAdapter.PANDAS needs the pandas extra)
+kagglehub[pandas-datasets]>=0.3.4
+
+# Running the notebook
+jupyter
+ipykernel
+
+# Optional: the notebook adds CatBoost to the CV comparison only if it is installed
+# catboost
