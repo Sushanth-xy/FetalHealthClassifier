@@ -65,7 +65,7 @@ The grid search (480 fits) and the stacking comparison are the slow cells and ca
 2. **Split:** stratified 80/20 train/test split (`random_state=42`).
 3. **Single-split baselines:** train and evaluate on the test set, with accuracy, a classification report and a confusion matrix for each:
    Gradient Boosting, Random Forest, KNN (k=5), LightGBM, XGBoost, Decision Tree and SVC (RBF).
-   KNN and SVC use features standardised with a `StandardScaler` fit on the training set only.
+   KNN and SVC use features standardised with a `StandardScaler` fit on the training set only. KNN additionally uses `SelectKBest(f_classif, k=10)`, also fit on the training set only, which raised its test accuracy from 0.8709 to 0.9108.
 4. **Cross-validated comparison (training set only):** 5-fold stratified CV repeated 3 times, reporting accuracy, macro F1 and per-class recall for each model. A second run adds Soft Voting and Stacking ensembles (Random Forest + LightGBM + XGBoost + SVC).
 5. **Class imbalance:** XGBoost retrained with balanced sample weights to improve recall on the Suspect class.
 6. **Tune:** grid search (96 parameter combinations, 5-fold CV, scored on macro F1) on the balanced-weight XGBoost.
@@ -81,9 +81,9 @@ The grid search (480 fits) and the stacking comparison are the slow cells and ca
 | XGBoost             | 0.9390 | 0.89 |
 | Gradient Boosting   | 0.9296 | 0.87 |
 | Random Forest       | 0.9249 | 0.85 |
+| KNN (k=5, SelectKBest 10) | 0.9108 | 0.82 |
 | Decision Tree       | 0.9014 | 0.82 |
 | SVC (RBF)           | 0.8944 | 0.78 |
-| KNN (k=5)           | 0.8709 | 0.74 |
 
 ### Repeated 5-fold cross-validation (training set, mean ± std)
 
@@ -92,7 +92,8 @@ The grid search (480 fits) and the stacking comparison are the slow cells and ca
 | XGBoost                 | 0.955 ± 0.007 | 0.920 ± 0.015 | 0.983 | 0.804 | 0.936 |
 | Stacking                | 0.953 ± 0.006 | 0.920 ± 0.012 | 0.981 | 0.807 | 0.941 |
 | Soft Voting             | 0.953 ± 0.005 | 0.918 ± 0.012 | 0.983 | 0.795 | 0.936 |
-| LightGBM                | 0.953 ± 0.006 | 0.918 ± 0.009 | 0.977 | 0.835 | 0.934 |
+| LightGBM                | 0.954 ± 0.005 | 0.920 ± 0.011 | 0.984 | 0.804 | 0.931 |
+| LightGBM (balanced class weight) | 0.953 ± 0.006 | 0.918 ± 0.009 | 0.977 | 0.835 | 0.934 |
 | Gradient Boosting       | 0.953 ± 0.007 | 0.917 ± 0.014 | 0.982 | 0.815 | 0.912 |
 | Random Forest           | 0.942 ± 0.005 | 0.894 ± 0.017 | 0.981 | 0.763 | 0.877 |
 | Decision Tree           | 0.922 ± 0.017 | 0.874 ± 0.025 | 0.956 | 0.736 | 0.917 |
@@ -118,7 +119,7 @@ The paper reported the following accuracies using a single 70/30 split on the UC
 | LightGBM          | 0.9558 | 0.9437 |
 | Random Forest     | 0.9495 | 0.9249 |
 | XGBoost           | 0.9495 | 0.9390 |
-| KNN               | 0.9401 | 0.8709 |
+| KNN               | 0.9401 | 0.9108 |
 | Decision Tree     | 0.9338 | 0.9014 |
 | SVC (RBF)         | 0.9211 | 0.8944 |
 
